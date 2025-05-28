@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Météo</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <div class="logo">🌤️ <span>météo</span><span class="green">.com</span></div>
+    <input type="text" id="ville" placeholder="recherche une ville">
+    <nav>
+      <a href="#">accueil</a>
+      <a href="#">actualité météo</a>
+    </nav>
+  </header>
+
+  <main class="main-container">
+    <h2>météo actuelle : <span id="ville-affichee">chargement...</span></h2>
+    <div class="météo-box2">
+      <div class="météo-info">
+        <p><strong id="description-actuelle">chargement...</strong></p>
+        <img id="icone-actuelle" src="" alt="icône météo">
+      </div>
+      <div class="météo-temp">
+        <p id="temp-min">--°C</p>
+        <hr>
+        <p id="temp-max">--°C</p>
+      </div>
+    </div>
+    <br><br>
+
+
+    <!-- <a href="./index2.html"><button>accueil</button></a>
+
+    <a href="./index3.html"><button>actu météo</button></a> -->
+    
+
+    <div class="detail-meteo">
+      <h2>détail de la météo d'aujourd'hui:</h2>
+      <div class="carte-meteo">
+        <div class="ligne">
+          <div class="colonne">matin:</div>
+          <div class="colonne icone"><img id="icone-matin" src="" alt=""></div>
+          <div class="colonne" id="temp-matin">--°C</div>
+        </div>
+        <hr>
+        <div class="ligne">
+          <div class="colonne">après-midi:</div>
+          <div class="colonne icone"><img id="icone-apresmidi" src="" alt=""></div>
+          <div class="colonne" id="temp-apresmidi">--°C</div>
+        </div>
+        <hr>
+        <div class="ligne">
+          <div class="colonne">soir:</div>
+          <div class="colonne icone"><img id="icone-soir" src="" alt=""></div>
+          <div class="colonne" id="temp-soir">--°C</div>
+        </div>
+        <hr>
+        <div class="ligne">
+          <div class="colonne">nuit:</div>
+          <div class="colonne icone"><img id="icone-nuit" src="" alt=""></div>
+          <div class="colonne" id="temp-nuit">--°C</div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p>2025 - météo.com - mention légales</p>
+  </footer>
+
+  <script src="exo.js"></script>
+</body>
+</html>
+
+  
+
+

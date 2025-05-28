@@ -1,0 +1,152 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  font-family: sans-serif;
+  background-color: #a3d4f7;
+  color: #000;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+header {
+  background-color: #6bb8e6;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+h2{
+  color: rgb(251, 251, 251);
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.logo .green {
+  color: #32cd32;
+}
+
+input[type="text"] {
+  padding: 0.5rem;
+  font-size: 1rem;
+  width: 250px;
+  border: none;
+  border-radius: 5px;
+}
+
+nav a {
+  margin-left: 1rem;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.main-container {
+  flex: 1;
+  padding: 2rem;
+  text-align: center;
+}
+
+.météo-box2 {
+  background-color: #e2f0fb;
+  padding: 1rem;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  max-width: 500px;
+  margin: 1rem auto;
+  box-shadow: 0 10px 10px 0px rgba(0,0,0,0.1),
+  inset 0 10px 10px 0px rgba(0,0,0,0.1);
+  
+  
+}
+
+button{
+  background-color: #518bc6;
+  border-radius: 5px;
+  width: 90px;
+  height: 40px;
+  color: white;
+  justify-content: space-around;
+  margin-left: 0%;
+}
+
+a{
+  /* display: flex;
+  justify-content: space-around; */
+}
+
+.météo-info img {
+  width: 80px;
+}
+
+.detail-meteo {
+  margin-top: 2rem;
+}
+
+.carte-meteo {
+  background-color: #e2f0fb;
+  border-radius: 10px;
+  padding: 1rem;
+  max-width: 400px;
+  margin: auto;
+  box-shadow: 0 10px 10px 0px rgba(0,0,0,0.1),
+  inset 0 10px 10px 0px rgba(0,0,0,0.1);
+}
+
+.ligne {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0.5rem 0;
+}
+
+.colonne.icone img {
+  width: 40px;
+}
+
+footer {
+  background-color: #518bc6;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+}
+
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+  }
+
+  nav {
+    display: flex;
+    flex-direction: column;
+  }
+
+  nav a {
+    margin: 5px 0;
+  }
+
+  .météo-box2, .carte-meteo {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .ligne {
+    flex-direction: column;
+  }
+
+  .colonne {
+    width: 100%;
+    margin: 5px 0;
+  }
+
+}
