@@ -110,19 +110,17 @@ main {
   inset 0 10px 10px 0px rgba(0,0,0,0.1);
 }
 
-/* S'assurer que le body prend toute la hauteur */
+
 html, body {
   height: 100%;
   margin: 0;
 }
 
-/* Faire du body un conteneur flex en colonne */
 body {
   display: flex;
   flex-direction: column;
 }
 
-/* Empêche le footer de remonter si le contenu est court */
 main {
   flex: 1;
 }

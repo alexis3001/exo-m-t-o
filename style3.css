@@ -6,19 +6,17 @@
 }
 
 
-/* S'assurer que le body prend toute la hauteur */
 html, body {
   height: 100%;
   margin: 0;
 }
 
-/* Faire du body un conteneur flex en colonne */
+
 body {
   display: flex;
   flex-direction: column;
 }
 
-/* Empêche le footer de remonter si le contenu est court */
 main {
   flex: 1;
 }
@@ -96,9 +94,13 @@ h1 {
 
 .day-card img {
   width: 60px;
-  height: 60px;
+  height: 59px;
 }
 
+/* main {
+
+
+} */
 footer {
   text-align: center;
   padding: 1rem;
