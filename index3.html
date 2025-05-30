@@ -3,23 +3,28 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Météo</title>
-  <link rel="stylesheet" href="style.css" />
+  <title>Prévisions 5 jours - Météo.com</title>
+  <link rel="stylesheet" href="style3.css" />
 </head>
 <body>
   <header>
     <div class="logo">🌤️ <span>météo</span><span class="green">.com</span></div>
-    <input type="text" id="ville" placeholder="recherche une ville">
     <nav>
-      <a href="./index.html">météo du jour</a>
-      <a href="./index2.html">accueil</a>
+      <a href="index.html">Météo actuelle</a>
+      <a href="index3.html">Prévisions 5 jours</a>
     </nav>
   </header>
 
   <main class="main-container">
-    
+    <h2>Prévisions pour les 5 prochains jours</h2>
+    <input type="text" id="ville" placeholder="Entrez une ville">
+    <div id="previsions-container" class="previsions"></div>
   </main>
-<script src="./exo.js"></script>
+
   <footer>
-    <p>2025 - météo.com - mention légales</p>
+    <p>2025 - météo.com - Mentions légales</p>
   </footer>
+
+  <script src="./exo2.js"></script>
+</body>
+</html>

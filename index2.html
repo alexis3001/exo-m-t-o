@@ -3,32 +3,53 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Météo</title>
-  <link rel="stylesheet" href="style.css" />
+  <title>Accueil - Météo.com</title>
+  <link rel="stylesheet" href="style2.css" />
 </head>
-<header>
+<body>
+  <header>
     <div class="logo">🌤️ <span>météo</span><span class="green">.com</span></div>
-    <input type="text" id="ville" placeholder="recherche une ville">
     <nav>
-      <a href="./index.html">accueil</a>
-      <a href="#">actualité météo</a>
+      <button class="menu-toggle" id="menu-toggle">&#9776;</button>
+      <ul id="menu">
+        <li><a href="index.html">Météo actuelle</a></li>
+        <li><a href="index3.html">prévisions météo 5j/7</a></li>
+      </ul>
     </nav>
   </header>
 
-<body>
-    
-    <div id="forecast-container"></div>
+  <main>
+    <section class="intro">
+      <h1>Bienvenue sur <span class="green">météo.com</span></h1>
+      <p>Consultez la météo de votre ville en un clic, suivez les actualités climatiques et préparez votre journée facilement.</p>
+      <a href="index.html" class="btn">Voir la météo</a>
+    </section>
 
-    <script src="forecast.js"></script>
+    <section class="features">
+      <div class="card">
+        <h2>Prévisions locales</h2>
+        <p>Températures, précipitations et vent dans votre ville.</p>
+      </div>
+      <div class="card">
+        <h2>Actualités météo</h2>
+        <p>Restez informé des événements climatiques importants.</p>
+      </div>
+      <div class="card">
+        <h2>Design adapté</h2>
+        <p>Navigation facile sur mobile et ordinateur.</p>
+      </div>
+    </section>
+  </main>
 
-
-
-  
-<h1>Prévisions météo sur 5 jours</h1>
-  <main class="main-container">
-    
-  </main></body>
-<script src="./exo.js"></script>
   <footer>
-    <p>2025 - météo.com - mention légales</p>
+    <p>2025 - météo.com - Mentions légales</p>
   </footer>
+
+  <script>
+    document.getElementById("menu-toggle").addEventListener("click", function() {
+      document.getElementById("menu").classList.toggle("open");
+    });
+  </script>
+</body>
+</html>
+
