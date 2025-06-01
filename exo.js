@@ -1,5 +1,9 @@
 const API_KEY = "ae7bfea9e7084636c48ff46874a3b28e";
 
+document.getElementById("menu-toggle").addEventListener("click", function () {
+    document.getElementById("menu").classList.toggle("open");
+  });
+
 function getIconUrl(iconCode) {
   return `https://openweathermap.org/img/wn/${iconCode}@2x.png`;
 }
@@ -12,6 +16,7 @@ function afficherMeteo(ville) {
         alert("Ville non trouvée !");
         return;
       }
+
 
       const now = data.list[0];
 
@@ -53,6 +58,7 @@ function afficherMeteo(ville) {
     .catch(err => console.error("Erreur météo :", err));
 }
 
+
 document.addEventListener("DOMContentLoaded", () => {
   const input = document.getElementById("ville");
 
@@ -71,6 +77,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Afficher Paris au démarrage
   afficherMeteo("Paris");
+
+
+  
 });
 
 

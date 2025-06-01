@@ -77,6 +77,57 @@ h1 {
   border-radius: 5px;
 }
 
+/* Style général */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #65bdf6;
+  padding: 1rem;
+  color: white;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+}
+
+.logo .green {
+  color: #9effa8;
+}
+
+nav {
+  position: relative;
+}
+
+/* Burger icon */
+.menu-toggle {
+  background: none;
+  border: none;
+  font-size: 2rem;
+  color: white;
+  cursor: pointer;
+  display: none; /* caché en grand écran */
+}
+
+/* Menu links */
+#menu {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+  padding: 0;
+  margin: 0;
+}
+
+#menu li a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+
 #previsions-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
@@ -123,4 +174,31 @@ footer {
     gap: 0.5rem;
     align-items: center;
   }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  #menu {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: #65bdf6;
+    width: 200px;
+    border-radius: 0 0 10px 10px;
+    padding: 1rem;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  }
+
+  #menu.open {
+    display: flex;
+  }
+
+  #menu li {
+    margin: 0.5rem 0;
+  }
 }
+
+

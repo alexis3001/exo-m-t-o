@@ -43,6 +43,11 @@ const API_KEY = "ae7bfea9e7084636c48ff46874a3b28e";
         });
     }
 
+    document.getElementById("menu-toggle").addEventListener("click", function () {
+    document.getElementById("menu").classList.toggle("open");
+  });
+
+
     document.addEventListener("DOMContentLoaded", () => {
       afficherPrevisions("Paris");
 
