@@ -43,9 +43,13 @@ const API_KEY = "ae7bfea9e7084636c48ff46874a3b28e";
         });
     }
 
+    
+
     document.getElementById("menu-toggle").addEventListener("click", function () {
     document.getElementById("menu").classList.toggle("open");
   });
+
+
 
 
     document.addEventListener("DOMContentLoaded", () => {
@@ -59,5 +63,35 @@ const API_KEY = "ae7bfea9e7084636c48ff46874a3b28e";
             afficherPrevisions(ville);
           }
         }
+
+
+        function afficherSuggestions(valeur) {
+    suggestions.innerHTML = "";
+
+    if (valeur.length < 3) return;
+
+    fetch(`https://api.openweathermap.org/geo/1.0/direct?q=${valeur}&limit=5&appid=${API_KEY}`)
+      .then(res => res.json())
+      .then(data => {
+        if (!Array.isArray(data)) return;
+
+
+        data 
+        .filter(ville => {
+          const nomComplet =`${ville.name}${ville.state ? ', ' + ville.state : ''}, ${ville.country}`;
+          const li = document.createElement("li");
+          li.textContent = nomComplet;
+          li.style.padding = "8px";
+          li.style.cursor = "pointer";
+          li.addEventListener("click", () => {
+            input.value = nomComplet;
+            suggestions.innerHTML = "";
+            afficherMeteoParCoordonnees(ville.lat, ville.lon);
+          });
+          suggestions.appendChild(li);
+        });
+      })
+      .catch(err => console.error("Erreur autocomplétion :", err));
+  }
       });
     });
